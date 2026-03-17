@@ -1,0 +1,5 @@
+{
+  "name": "visual-portfolio",
+  "description": "一个用于上传和管理图片及视频的交互式作品集，配备 AI 自动生成描述功能。",
+  "requestFramePermissions": []
+}

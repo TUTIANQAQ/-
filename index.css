@@ -1,0 +1,51 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background-color: #f2f0e9; /* Warm rice paper fallback color */
+  color: #2C2C2C; /* Dai Black 黛黑色 */
+}
+
+/* Custom Scrollbar for Webkit */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Hide scrollbar for clean aesthetic where needed but keep functionality */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Utility for text outlines or specific glow effects if needed */
+.text-glow {
+  text-shadow: 0 0 20px rgba(168, 251, 211, 0.5);
+}
+
+/* Serif font support for the new title style */
+.font-serif-cn {
+  font-family: "Noto Serif SC", "Songti SC", "SimSun", "Times New Roman", serif;
+}
