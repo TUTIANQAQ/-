@@ -18,8 +18,14 @@ import { analyzeImage } from './services/geminiService';
 import { fetchWorks, uploadWorkFile, createWork, updateWork, deleteWork } from './services/worksService';
 import Auth from './src/components/Auth';
 import { useAuth } from './src/contexts/AuthContext';
+import Admin from './src/pages/Admin';
 
 const App: React.FC = () => {
+  // 轻量“路由”：无 react-router 时用 pathname 切页面
+  if (typeof window !== 'undefined' && window.location.pathname === '/admin') {
+    return <Admin />;
+  }
+
   const fileInputRef = useRef<HTMLInputElement>(null);
   const { user, signOut, loading: authLoading } = useAuth();
   const [items, setItems] = useState<MediaItem[]>([]);
